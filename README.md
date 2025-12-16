@@ -1,24 +1,23 @@
 # Graziela Paes Portfolio
 
-Site artístico e portfólio de **VJ Grazzi** (Graziela Paes).
+Artistic website and portfolio for **VJ Grazzi** (Graziela Paes).
 
-## Sobre
+## About
 
-Este projeto é uma vitrine digital para os trabalhos de VJ e arte visual de Graziela Paes.
+A digital showcase for VJ and visual art works by Graziela Paes.
 
-## Tecnologias
+## Tech Stack
 
 - Next.js
 - React Three Fiber
 - TailwindCSS
 - TypeScript
 
-## Desenvolvimento
+## Development
 
 ```bash
 npm install
 npm run dev
 ```
 
-Acesse [http://localhost:3000](http://localhost:3000)
-
+Visit [http://localhost:3000](http://localhost:3000)
