@@ -1,0 +1,246 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&family=Quicksand:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* ========================================
+   * Color Palette - Cyan (Primary Accent)
+   * ======================================== */
+  --color-cyan-50: #ecfeff;
+  --color-cyan-100: #cffafe;
+  --color-cyan-200: #a5f3fc;
+  --color-cyan-300: #67e8f9;
+  --color-cyan-400: #22d3ee;
+  --color-cyan-500: #06b6d4;
+  --color-cyan-600: #0891b2;
+  --color-cyan-700: #0e7490;
+  --color-cyan-800: #155e75;
+  --color-cyan-900: #164e63;
+
+  /* ========================================
+   * Color Palette - Magenta (Secondary Accent)
+   * ======================================== */
+  --color-magenta-50: #fdf4ff;
+  --color-magenta-100: #fae8ff;
+  --color-magenta-200: #f5d0fe;
+  --color-magenta-300: #f0abfc;
+  --color-magenta-400: #e879f9;
+  --color-magenta-500: #d946ef;
+  --color-magenta-600: #c026d3;
+  --color-magenta-700: #a21caf;
+  --color-magenta-800: #86198f;
+  --color-magenta-900: #701a75;
+
+  /* ========================================
+   * Color Palette - Black/Gray
+   * ======================================== */
+  --color-black-50: #f7f7f7;
+  --color-black-100: #e3e3e3;
+  --color-black-200: #c8c8c8;
+  --color-black-300: #a4a4a4;
+  --color-black-400: #818181;
+  --color-black-500: #666666;
+  --color-black-600: #515151;
+  --color-black-700: #434343;
+  --color-black-800: #383838;
+  --color-black-900: #121212;
+  --color-black-950: #0a0a0a;
+
+  /* ========================================
+   * Base Colors
+   * ======================================== */
+  --color-dark: #0a0a0a;
+  --color-dark-alt: #121212;
+
+  /* ========================================
+   * Semantic Colors - Background
+   * ======================================== */
+  --bg-primary: var(--color-dark);
+  --bg-secondary: var(--color-dark-alt);
+  --bg-tertiary: var(--color-black-800);
+
+  /* ========================================
+   * Semantic Colors - Text
+   * ======================================== */
+  --text-primary: var(--color-black-50);
+  --text-secondary: var(--color-black-200);
+  --text-muted: var(--color-black-300);
+  --text-light: var(--color-black-400);
+
+  /* ========================================
+   * Semantic Colors - Accent
+   * ======================================== */
+  --accent-primary: var(--color-cyan-400);
+  --accent-hover: var(--color-cyan-300);
+  --accent-active: var(--color-cyan-500);
+  --accent-muted: var(--color-cyan-600);
+  --accent-light: var(--color-cyan-900);
+
+  /* ========================================
+   * Semantic Colors - Secondary Accent
+   * ======================================== */
+  --secondary-primary: var(--color-magenta-400);
+  --secondary-hover: var(--color-magenta-300);
+  --secondary-active: var(--color-magenta-500);
+
+  /* ========================================
+   * Semantic Colors - Border
+   * ======================================== */
+  --border-light: var(--color-black-700);
+  --border-default: var(--color-black-600);
+  --border-dark: var(--color-black-500);
+
+  /* ========================================
+   * Shadows
+   * ======================================== */
+  --shadow-cyan: rgba(34, 211, 238, 0.25);
+  --shadow-magenta: rgba(232, 121, 249, 0.25);
+  --shadow-dark: rgba(0, 0, 0, 0.5);
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.3);
+  --shadow-default: 0 1px 3px 0 rgba(0, 0, 0, 0.4), 0 1px 2px -1px rgba(0, 0, 0, 0.4);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.4), 0 2px 4px -2px rgba(0, 0, 0, 0.4);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.4), 0 4px 6px -4px rgba(0, 0, 0, 0.4);
+  --shadow-cyan-lg: 0 10px 25px -5px var(--shadow-cyan);
+  --shadow-magenta-lg: 0 10px 25px -5px var(--shadow-magenta);
+
+  /* ========================================
+   * Typography
+   * ======================================== */
+  --font-serif: 'Cormorant Garamond', Georgia, serif;
+  --font-sans: 'Quicksand', sans-serif;
+
+  /* ========================================
+   * Transitions
+   * ======================================== */
+  --transition-fast: 150ms ease;
+  --transition-default: 300ms ease;
+  --transition-slow: 500ms ease;
+
+  /* ========================================
+   * Border Radius
+   * ======================================== */
+  --radius-sm: 0.25rem;
+  --radius-default: 0.5rem;
+  --radius-md: 0.75rem;
+  --radius-lg: 1rem;
+  --radius-xl: 1.5rem;
+  --radius-2xl: 2rem;
+  --radius-full: 9999px;
+
+  /* ========================================
+   * Z-Index Layers
+   * ======================================== */
+  --z-base: 0;
+  --z-dropdown: 10;
+  --z-sticky: 20;
+  --z-fixed: 30;
+  --z-modal: 40;
+  --z-popover: 50;
+  --z-tooltip: 60;
+}
+
+/* ========================================
+ * Base Styles
+ * ======================================== */
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  color: var(--text-primary);
+  background: var(--bg-primary);
+  min-height: 100vh;
+  font-family: var(--font-sans);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-serif);
+  font-weight: 500;
+  letter-spacing: 0.02em;
+}
+
+/* ========================================
+ * Selection
+ * ======================================== */
+::selection {
+  background-color: var(--color-cyan-500);
+  color: var(--text-primary);
+}
+
+/* ========================================
+ * Scrollbar
+ * ======================================== */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-primary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-black-600);
+  border-radius: var(--radius-sm);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent-primary);
+}
+
+/* ========================================
+ * Form Elements
+ * ======================================== */
+input:focus,
+textarea:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px var(--accent-primary);
+}
+
+/* ========================================
+ * Utility Classes
+ * ======================================== */
+@layer utilities {
+  .text-gradient {
+    background: linear-gradient(135deg, var(--accent-primary), var(--secondary-primary));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .bg-gradient-main {
+    background: linear-gradient(
+      135deg,
+      var(--bg-primary) 0%,
+      var(--bg-secondary) 50%,
+      var(--bg-tertiary) 100%
+    );
+  }
+
+  .shadow-cyan {
+    box-shadow: var(--shadow-cyan-lg);
+  }
+
+  .shadow-magenta {
+    box-shadow: var(--shadow-magenta-lg);
+  }
+
+  .glow-cyan {
+    box-shadow: 0 0 20px var(--shadow-cyan), 0 0 40px var(--shadow-cyan);
+  }
+
+  .glow-magenta {
+    box-shadow: 0 0 20px var(--shadow-magenta), 0 0 40px var(--shadow-magenta);
+  }
+
+  .glow-rgb {
+    box-shadow: 
+      0 0 20px var(--shadow-cyan),
+      0 0 40px var(--shadow-magenta);
+  }
+}
